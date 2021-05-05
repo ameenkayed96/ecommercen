@@ -7,7 +7,7 @@
 						<div class="topbar-menu left-menu">
 							<ul>
 								<li class="menu-item" >
-									<a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+									<a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+963) 930 030 353</a>
 								</li>
 							</ul>
 						</div>
@@ -17,10 +17,8 @@
 								<li class="menu-item lang-menu menu-item-has-children parent">
 									<a title="English" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-en.png')}}" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu lang" >
-										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-hun.png')}}" alt="lang-hun"></span>Hungary</a></li>
-										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-ger.png')}}" alt="lang-ger" ></span>German</a></li>
-										<li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-fra.png')}}" alt="lang-fre"></span>French</a></li>
-										<li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-can.png')}}" alt="lang-can"></span>Canada</a></li>
+										<li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="{{asset('assets/images/Saudi-Arabia-Flag.png')}}" style="height: 17.22px;; width:20px;" alt="lang-hun"></span>Arabic</a></li>
+										<li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="{{asset('assets/images/lang-en.png')}}" alt="lang-ger" ></span>English</a></li>
 									</ul>
 								</li>
 								<li class="menu-item menu-item-has-children parent" >
@@ -36,11 +34,25 @@
 								</li>
                                 @if(Route::has('login'))
                                 @auth
-                                <li class="menu-item" ><a title="Register or Login" href="{{route('logout')}}">LogOut</a></li>
+                                <li class="menu-item" ><a title="Register or Login" href="{{route('signout')}}">LogOut</a></li>
                                     @if (Auth::user()->type === 'admin')
-
+										<li class="menu-item menu-item-has-children parent" >
+											<a title="My Account" href="#">My Account({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+											<ul class="submenu curency" >
+												<li class="menu-item" >
+													<a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
+												</li>
+											</ul>
+										</li>
                                     @else
-
+									<li class="menu-item menu-item-has-children parent" >
+										<a title="My Account" href="#">My Account({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+										<ul class="submenu curency" >
+											<li class="menu-item" >
+												<a title="Dashboard" href="{{route('user.dashboard')}}">Profile</a>
+											</li>
+										</ul>
+									</li>
                                 @endif
 
                                 @else
@@ -57,7 +69,7 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="{{asset('assets/images/logo-top-1.png')}}" alt="mercado"></a>
+							<a href="index.html" class="link-to-home"><img src="{{asset('assets/images/logo5.jpg')}}" alt="mercado"></a>
 						</div>
 
 						<div class="wrap-search center-section">
